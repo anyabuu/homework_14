@@ -1,0 +1,83 @@
+.footer {
+    background-color: map-get($colors,background);
+}
+
+.footer__container {
+    padding-top: #{$title-width}px;
+    padding-bottom: 70px;
+}
+
+.footer__title {
+    @include title-text-style;
+    margin-bottom: 51px;
+}
+
+.footer__lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 308px;
+    padding-bottom: 100px;
+}
+
+.list {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer__image-arrow-top--wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (max-width: 1220px) {
+    .footer__container {
+        @include container-padding-laptop
+    }
+
+    .footer__lists {
+        gap: 23%;
+        padding-bottom: 50px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .footer__container {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .footer__title {
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+
+    .list {
+        font-size: 1.4rem;
+        gap: 19px;
+    }
+
+    .footer__lists {
+        gap: 99px;
+        row-gap: 30px;
+        padding-bottom: 0px;
+    }
+
+    .footer__contacts--list-last {
+        gap: 7px;
+    } 
+
+    
+}
+
+
+
+
+

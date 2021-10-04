@@ -1,0 +1,151 @@
+.portfolio__container {
+    padding-top: #{$title-width}px;
+    padding-bottom: 145px;
+}
+
+.portfolio__title {
+    @include title-text-style;
+    padding-bottom: 86px;
+}
+
+.portfolio__subtitle {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    grid-area: h;
+}
+
+.portfolio__content {
+    @include content-text;
+    grid-area: p;
+}
+
+.portfolio__port-content { 
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 45px 125px;
+    grid-template-areas: "h h"
+                        "p img"
+                        "arrows img";
+}
+
+.portfolio__port-images {
+    display: grid;
+    grid-template-columns: 350px 255px;
+    grid-template-rows: 144px 50px 144px;
+    grid-area: img;
+    column-gap: 30px;
+    row-gap: 32px;
+
+    img:nth-child(2) {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    }
+
+    img:nth-child(3) {
+    grid-row: 2/4;
+    }
+}
+
+.portfolio__block-image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.portfolio__arrows {
+    grid-area: arrows;
+    display: flex;
+    align-self: end;
+    gap: 30px;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 1200px) {
+
+    .portfolio__container {
+        @include container-padding-laptop
+    }
+
+    .portfolio__title {
+        padding-bottom: 60px;
+    }
+
+    .portfolio__port-content{
+        gap: 60px;
+    }
+
+    .portfolio__subtitle {
+        font-size: 2rem;
+    }
+
+    .portfolio__port-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio__arrows {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .portfolio__container {
+        width: auto;
+        background-color: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .portfolio__title {
+        padding-top: 25px;
+        padding-bottom: 19px;
+        margin-bottom: 0px;
+    }
+
+    .portfolio__port-content {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .portfolio__subtitle {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8;  
+    }
+
+    .portfolio__content {
+        font-size: 1.2rem;
+        line-height: 1.21;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .portfolio__port-images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30% 10% 30%;
+        column-gap: 14px;
+        row-gap: 12px;
+        align-items: stretch;
+    }
+
+    .portfolio__arrows {
+        display: none;
+    }
+    
+}
+
+
+
+

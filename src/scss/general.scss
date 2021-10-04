@@ -1,0 +1,43 @@
+$colors: (
+    background: #FFFAF2,
+    text-main: #333333,
+    text-hero: white
+);
+
+$title-width: 93;
+
+@mixin container-padding-laptop {
+    padding-top: 70px;
+    padding-bottom: 70px;
+} 
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Libre Franklin";
+    font-size: 10px;
+    color: map-get($colors,text-main);
+}
+
+.container {
+    width: 1110px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 1220px) {
+
+    .container {
+        width: 75%;
+    }
+}
+
+@media (max-width: 730px) {
+    .container {
+        width: 75%;
+}
+}
